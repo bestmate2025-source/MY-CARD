@@ -1,0 +1,1525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Al Farooq Real Estate Invest L.L.C · Premium Properties</title>
+  <style>
+    /* reset & base - new elegant sand & desert tones */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #0f0e0a;
+      color: #ece8e0;
+      line-height: 1.5;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 2rem;
+      flex: 1;
+      width: 100%;
+    }
+
+    /* ----- modern header with gold & sand gradient ----- */
+    .site-header {
+      background: #1a1712;
+      border-bottom: 2px solid #c8a84e;
+      padding: 0.8rem 1.5rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 10px 25px -8px rgba(0,0,0,0.8);
+    }
+
+    .header-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      cursor: pointer;
+    }
+
+    .diamond-big {
+      color: #e4bc6e;
+      font-size: 2.3rem;
+      line-height: 1;
+      filter: drop-shadow(0 0 6px #c8a15e);
+      display: inline-block;
+    }
+
+    .logo-text {
+      font-size: 1.6rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      background: linear-gradient(135deg, #f3e0be, #e9c584);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .logo-text span {
+      background: #2c2418;
+      padding: 0.2rem 0.9rem;
+      border-radius: 40px;
+      font-size: 0.75rem;
+      font-weight: 400;
+      margin-left: 0.6rem;
+      color: #e9cfa5;
+      border: 1px solid #c8a453;
+      letter-spacing: 0.5px;
+    }
+
+    .main-nav {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .main-nav a {
+      color: #e7dbbc;
+      text-decoration: none;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+      font-size: 1rem;
+      transition: 0.2s;
+      border-bottom: 1px solid transparent;
+      padding-bottom: 4px;
+      cursor: pointer;
+    }
+
+    .main-nav a:hover, .main-nav a.active {
+      color: #f5cf8c;
+      border-bottom-color: #e4b45e;
+    }
+
+    .contact-phone {
+      background: #2a241b;
+      padding: 0.4rem 1.2rem;
+      border-radius: 40px;
+      font-size: 0.9rem;
+      border: 1px solid #dbb15c;
+      color: #f8e2be;
+      font-weight: 500;
+    }
+
+    /* HERO SECTION */
+    .hero-section {
+      position: relative;
+      width: 100%;
+      min-height: 88vh;
+      background-image: url('https://images.pexels.com/photos/280229/pexels-photo-280229.jpeg?auto=compress&cs=tinysrgb&w=1600');
+      background-size: cover;
+      background-position: center 30%;
+      background-attachment: fixed;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 3rem;
+      border-radius: 0 0 48px 48px;
+      overflow: hidden;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(125deg, rgba(15,14,10,0.88) 0%, rgba(30,26,18,0.7) 60%, rgba(70,55,30,0.55) 100%);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 950px;
+      padding: 2rem;
+      text-align: center;
+      color: white;
+      animation: fadeInUp 1s ease;
+    }
+
+    .hero-tagline {
+      display: inline-block;
+      font-size: 0.85rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      background: rgba(200,168,78,0.2);
+      backdrop-filter: blur(5px);
+      padding: 0.5rem 1.6rem;
+      border-radius: 60px;
+      border: 1px solid rgba(220,180,80,0.6);
+      margin-bottom: 1.8rem;
+      color: #fadfaa;
+      font-weight: 500;
+    }
+
+    .hero-title {
+      font-size: clamp(2.4rem, 8vw, 4.6rem);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 1.3rem;
+      text-shadow: 0 2px 20px rgba(0,0,0,0.5);
+    }
+
+    .hero-highlight {
+      background: linear-gradient(135deg, #f7e5c2, #e5bd6f);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      position: relative;
+      display: inline-block;
+    }
+
+    .hero-description {
+      font-size: clamp(1rem, 4vw, 1.3rem);
+      color: rgba(255,250,235,0.9);
+      max-width: 720px;
+      margin: 0 auto 2rem;
+      line-height: 1.6;
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 3rem;
+    }
+
+    .hero-btn {
+      padding: 1rem 2.4rem;
+      border-radius: 60px;
+      font-size: 1.05rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-btn.primary {
+      background: linear-gradient(115deg, #d9a341, #b57c2e);
+      color: #1e1b15;
+      border: none;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    }
+
+    .hero-btn.primary:hover {
+      background: linear-gradient(115deg, #eab560, #c9913e);
+      transform: translateY(-3px);
+    }
+
+    .hero-btn.secondary {
+      background: transparent;
+      color: #f7e5ca;
+      border: 2px solid rgba(220,180,85,0.7);
+      backdrop-filter: blur(5px);
+    }
+
+    .hero-btn.secondary:hover {
+      background: rgba(210,170,70,0.15);
+      border-color: #f0cf8b;
+      transform: translateY(-3px);
+    }
+
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+      padding: 1.8rem 0;
+      border-top: 1px solid rgba(210,175,85,0.35);
+      border-bottom: 1px solid rgba(210,175,85,0.35);
+    }
+
+    .stat-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .stat-number {
+      font-size: 2.3rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #fff2df, #eccb8b);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .stat-label {
+      font-size: 0.85rem;
+      color: rgba(255,245,215,0.85);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .hero-scroll-indicator {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      color: #f3e0bc;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      opacity: 0.7;
+      cursor: pointer;
+    }
+
+    .scroll-arrow {
+      font-size: 1.5rem;
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes bounce {
+      0%,20%,50%,80%,100% { transform: translateY(0);}
+      40% { transform: translateY(-10px);}
+      60% { transform: translateY(-5px);}
+    }
+
+    /* frame strip */
+    .frame-strip {
+      width: 100%;
+      overflow: hidden;
+      background: #17140f;
+      border-radius: 28px;
+      border: 1px solid #c8a453;
+      margin-bottom: 3rem;
+      padding: 1.2rem 0;
+    }
+
+    .frame-track {
+      display: flex;
+      gap: 2rem;
+      width: fit-content;
+      animation: scrollFrame 22s linear infinite;
+    }
+
+    .frame-track img {
+      height: 100px;
+      width: auto;
+      border-radius: 14px;
+      border: 2px solid #b99146;
+      background: #201d16;
+      object-fit: cover;
+    }
+
+    @keyframes scrollFrame {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* section titles */
+    .section-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin: 2rem 0 2rem 0;
+      flex-wrap: wrap;
+    }
+
+    .section-title h2 {
+      font-size: 2rem;
+      font-weight: 500;
+      color: #f7e9d3;
+      border-left: 5px solid #e9bd6a;
+      padding-left: 1rem;
+      background: linear-gradient(90deg, #26201a 0%, transparent 100%);
+    }
+
+    .click-badge {
+      background: #2e2a21;
+      padding: 0.3rem 1.2rem;
+      border-radius: 40px;
+      border: 1px solid #c8a453;
+      font-size: 0.9rem;
+      color: #f5e2bd;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    /* property grid */
+    .property-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .property-card {
+      background: #1f1b15;
+      border-radius: 28px;
+      border: 1px solid #b7904b;
+      overflow: hidden;
+      transition: transform 0.25s ease, box-shadow 0.3s;
+      position: relative;
+    }
+
+    .property-card:hover {
+      transform: translateY(-6px);
+      border-color: #e9bc6c;
+    }
+
+    .card-img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      display: block;
+      border-bottom: 2px solid #b48b3e;
+    }
+
+    .whatsapp-overlay {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(6px);
+      border-radius: 50px;
+      padding: 5px 12px 5px 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      border: 1px solid #2fa84b;
+      color: white;
+      font-size: 0.8rem;
+      text-decoration: none;
+      z-index: 2;
+    }
+
+    .whatsapp-overlay svg {
+      width: 16px;
+      height: 16px;
+      fill: #fff;
+    }
+
+    .card-content {
+      padding: 1.2rem 1rem 1.5rem;
+    }
+
+    .card-content h3 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #fbebce;
+    }
+
+    .price {
+      color: #f7d99e;
+      font-weight: 700;
+      font-size: 1.15rem;
+    }
+
+    .address {
+      color: #bcab8b;
+      font-size: 0.85rem;
+      margin: 0.5rem 0 0.8rem;
+      border-left: 2px solid #dcb161;
+      padding-left: 0.6rem;
+    }
+
+    .view-btn {
+      background: transparent;
+      border: 1px solid #b8934a;
+      color: #f5e2c2;
+      padding: 0.4rem 1.3rem;
+      border-radius: 40px;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .view-btn:hover {
+      background: #3b3022;
+      border-color: #e7c482;
+    }
+
+    /* Gallery Modal */
+    .gallery-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.95);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .gallery-modal.show {
+      display: flex;
+    }
+
+    .gallery-content {
+      position: relative;
+      max-width: 90%;
+      max-height: 90%;
+    }
+
+    .gallery-image {
+      width: 100%;
+      height: auto;
+      max-height: 80vh;
+      border-radius: 10px;
+      border: 2px solid #c8a453;
+    }
+
+    .gallery-close {
+      position: absolute;
+      top: -40px;
+      right: 0;
+      color: white;
+      font-size: 30px;
+      cursor: pointer;
+      background: #c8a453;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .gallery-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #c8a453;
+      color: #1a1712;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .gallery-prev { left: -60px; }
+    .gallery-next { right: -60px; }
+    .gallery-counter {
+      position: absolute;
+      bottom: -40px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #c8a453;
+      color: #1a1712;
+      padding: 5px 15px;
+      border-radius: 20px;
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+      .gallery-prev { left: -25px; }
+      .gallery-next { right: -25px; }
+      .gallery-nav { width: 35px; height: 35px; font-size: 18px; }
+    }
+
+    /* ABOUT US SECTION */
+    .about-section {
+      margin: 4rem 0;
+      background: linear-gradient(135deg, #1a1712 0%, #1f1b15 100%);
+      border-radius: 40px;
+      padding: 3rem;
+      border: 1px solid #c8a453;
+    }
+
+    .about-content {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    .about-text h3 {
+      font-size: 2rem;
+      color: #f7e9d3;
+      margin-bottom: 1.5rem;
+      background: linear-gradient(135deg, #fff, #e9c584);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .about-text p {
+      color: #bcab8b;
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+      font-size: 1.05rem;
+    }
+
+    .about-features {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .feature-item {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      background: rgba(255,255,255,0.03);
+      padding: 1rem;
+      border-radius: 16px;
+      border: 1px solid #b7904b;
+    }
+
+    .feature-icon {
+      font-size: 1.5rem;
+      color: #e9c584;
+    }
+
+    .feature-item h4 {
+      color: #fbebce;
+      font-size: 1rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .feature-item p {
+      color: #8a784e;
+      font-size: 0.85rem;
+      margin: 0;
+    }
+
+    .about-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      background: rgba(0,0,0,0.3);
+      padding: 2rem;
+      border-radius: 30px;
+      border: 1px solid #b7904b;
+    }
+
+    .about-stat-card {
+      text-align: center;
+      padding: 1.5rem 0.5rem;
+      background: #1f1b15;
+      border-radius: 20px;
+      border: 1px solid #b7904b;
+    }
+
+    .about-stat-number {
+      font-size: 2.5rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #fff, #e9c584);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .about-stat-label {
+      color: #bcab8b;
+      font-size: 0.85rem;
+    }
+
+    /* TEAM SECTION */
+    .team-section {
+      margin: 4rem 0;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .team-card {
+      background: #1f1b15;
+      border-radius: 24px;
+      border: 1px solid #b7904b;
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.25s;
+      padding: 1.5rem;
+    }
+
+    .team-card:hover {
+      transform: translateY(-5px);
+      border-color: #e9bc6c;
+    }
+
+    .team-img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 1rem;
+      border: 3px solid #e9c584;
+    }
+
+    .team-card h3 {
+      color: #fbebce;
+      font-size: 1.2rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .team-title {
+      color: #e9c584;
+      font-size: 0.85rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .team-desc {
+      color: #8a784e;
+      font-size: 0.8rem;
+      line-height: 1.5;
+    }
+
+    /* extra panel */
+    .extra-images-panel {
+      display: none;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin: 2rem 0 0.5rem;
+    }
+
+    .extra-images-panel.show-extra {
+      display: grid;
+    }
+
+    .extra-card {
+      background: #1e1a14;
+      border-radius: 20px;
+      border: 1px solid #b98f46;
+      padding: 0.6rem;
+      position: relative;
+    }
+
+    .extra-card img {
+      width: 100%;
+      aspect-ratio: 1/1;
+      border-radius: 16px;
+      object-fit: cover;
+    }
+
+    .click-message {
+      display: none;
+      background: #2b241b;
+      border: 1px solid #cb9e4e;
+      color: #fae7c3;
+      padding: 0.8rem 2rem;
+      border-radius: 60px;
+      margin: 1.5rem 0 0.5rem;
+      text-align: center;
+      justify-content: center;
+    }
+
+    .click-message.show-message {
+      display: flex;
+    }
+
+    /* QR BARCODE SECTION */
+    .barcodes-section {
+      max-width: 1280px;
+      margin: 3rem auto 2rem;
+      padding: 2rem;
+      background: linear-gradient(135deg, #1a1712 0%, #1f1b15 100%);
+      border-radius: 40px;
+      border: 1px solid #c8a453;
+    }
+
+    .barcodes-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .barcodes-header h2 {
+      font-size: 2rem;
+      font-weight: 500;
+      color: #f7e9d3;
+      display: inline-block;
+      border-left: 5px solid #e9bd6a;
+      padding-left: 1rem;
+    }
+
+    .barcode-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .barcode-card {
+      background: #1f1b15;
+      border-radius: 24px;
+      padding: 1.8rem 1.5rem;
+      text-align: center;
+      border: 1px solid #b7904b;
+    }
+
+    .barcode-icon {
+      font-size: 2.5rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .barcode-card h3 {
+      color: #fbebce;
+      font-size: 1.3rem;
+    }
+
+    .qr-container {
+      display: flex;
+      justify-content: center;
+      margin: 1rem 0;
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 10px;
+    }
+
+    .scan-hint {
+      color: #e9c584;
+      font-size: 0.8rem;
+    }
+
+    /* map section */
+    .contact-map-section {
+      margin: 2rem 0;
+      background: #1b1711;
+      border-radius: 36px;
+      border: 1px solid #b9914c;
+      overflow: hidden;
+    }
+
+    .map-container {
+      width: 100%;
+      height: 320px;
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .contact-details {
+      padding: 2rem;
+      background: #18140e;
+      border-top: 1px solid #b58742;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .contact-info .office {
+      font-size: 1.4rem;
+      font-weight: 600;
+      background: linear-gradient(135deg, #f6e2bc, #eac481);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .phone-big {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #fad991;
+      text-decoration: none;
+    }
+
+    .direction-btn {
+      background: #4f3a1f;
+      border: 1px solid #e1b25c;
+      color: #fff2dd;
+      padding: 0.8rem 2rem;
+      border-radius: 60px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    /* footer */
+    .site-footer {
+      background: #13100b;
+      border-top: 2px solid #aa8542;
+      margin-top: 2rem;
+      padding: 2.5rem 1.5rem 2rem;
+      color: #cfbc96;
+    }
+
+    .footer-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 2.5rem;
+    }
+
+    .footer-col h4 {
+      color: #f3e0bc;
+      border-left: 3px solid #e6bf72;
+      padding-left: 0.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .footer-col p, .footer-col a {
+      color: #b89f72;
+      display: block;
+      margin-bottom: 0.5rem;
+      text-decoration: none;
+    }
+
+    .copyright {
+      max-width: 1280px;
+      margin: 2rem auto 0;
+      padding-top: 1.5rem;
+      text-align: center;
+      border-top: 1px solid #2b241b;
+      color: #a48348;
+      font-size: 0.8rem;
+    }
+
+    @media (max-width: 1024px) {
+      .property-grid, .team-grid { grid-template-columns: repeat(2, 1fr); }
+      .barcode-grid { grid-template-columns: repeat(2, 1fr); }
+      .about-content { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 768px) {
+      .property-grid, .team-grid, .barcode-grid { grid-template-columns: 1fr; }
+      .hero-stats { flex-direction: column; align-items: center; }
+      .contact-details { flex-direction: column; align-items: flex-start; }
+      .about-features { grid-template-columns: 1fr; }
+      .gallery-prev { left: 10px; }
+      .gallery-next { right: 10px; }
+    }
+    @media (max-width: 580px) {
+      .property-grid { grid-template-columns: 1fr; }
+      .frame-track img { height: 70px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo-area" onclick="location.href='#home'">
+        <span class="diamond-big">⬥</span>
+        <div class="logo-text">AL FAROOQ <span>REAL ESTATE</span></div>
+      </div>
+      <nav class="main-nav">
+        <a href="#home" class="nav-link">HOME</a>
+        <a href="#listings" class="nav-link">LISTINGS</a>
+        <a href="#about" class="nav-link">ABOUT</a>
+        <a href="#team" class="nav-link">TEAM</a>
+        <a href="#contact" class="nav-link">CONTACT</a>
+        <div class="contact-phone">📞 +971 50 153 8777</div>
+      </nav>
+    </div>
+  </header>
+
+  <section id="home" class="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="hero-tagline">PREMIUM INVESTMENTS • UAE LUXURY</span>
+      <h1 class="hero-title">Discover <span class="hero-highlight">Your Legacy</span><br>with Al Farooq Real Estate</h1>
+      <p class="hero-description">Premium properties, exclusive developments, and prime locations across UAE. Experience unmatched service and transparency.</p>
+      <div class="hero-cta">
+        <a href="#listings" class="hero-btn primary">VIEW PROPERTIES</a>
+        <a href="#contact" class="hero-btn secondary">CONTACT ADVISOR</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item"><span class="stat-number">220+</span><span class="stat-label">Luxury Units</span></div>
+        <div class="stat-item"><span class="stat-number">15+</span><span class="stat-label">Years Trust</span></div>
+        <div class="stat-item"><span class="stat-number">980+</span><span class="stat-label">Happy Investors</span></div>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator" onclick="location.href='#listings'"><span>Scroll Down</span><div class="scroll-arrow">↓</div></div>
+  </section>
+
+  <div class="container">
+    <div class="frame-strip">
+      <div class="frame-track">
+        <img src="https://picsum.photos/id/104/340/210" alt=""><img src="https://picsum.photos/id/106/340/210" alt=""><img src="https://picsum.photos/id/108/340/210" alt=""><img src="https://picsum.photos/id/112/340/210" alt=""><img src="https://picsum.photos/id/115/340/210" alt=""><img src="https://picsum.photos/id/116/340/210" alt=""><img src="https://picsum.photos/id/117/340/210" alt=""><img src="https://picsum.photos/id/119/340/210" alt="">
+        <img src="https://picsum.photos/id/104/340/210" alt=""><img src="https://picsum.photos/id/106/340/210" alt=""><img src="https://picsum.photos/id/108/340/210" alt=""><img src="https://picsum.photos/id/112/340/210" alt=""><img src="https://picsum.photos/id/115/340/210" alt=""><img src="https://picsum.photos/id/116/340/210" alt=""><img src="https://picsum.photos/id/117/340/210" alt=""><img src="https://picsum.photos/id/119/340/210" alt="">
+      </div>
+    </div>
+
+    <!-- LISTINGS SECTION -->
+    <div class="section-title" id="listings">
+      <h2>OUR EXCLUSIVE PORTFOLIO</h2>
+      <div class="click-badge" id="showMoreBtn"><span>▼</span> extra media gallery <span>▼</span></div>
+    </div>
+
+    <!-- property grid - ALL 10 GALLERIES (G1 to G10) -->
+    <div class="property-grid">
+      <!-- Property 1 - Obsidian Penthouse (G1: 8 images) -->
+      <div class="property-card">
+        <a class="whatsapp-overlay" href="https://wa.me/971543612414?text=Hello%2C%20interested%20in%20this%20property" target="_blank"> 
+		<svg viewBox="0 0 24 24"><path d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.33 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01z"/><path d="M16.8 13.8c-.26-.13-1.53-.75-1.77-.84-.24-.09-.41-.13-.58.13-.17.26-.67.84-.82 1.01-.15.17-.3.19-.56.06-.26-.13-1.11-.41-2.11-1.3-.78-.7-1.31-1.56-1.46-1.82-.15-.26-.02-.4.11-.53.11-.11.26-.3.39-.45.13-.15.17-.26.26-.43.09-.17.04-.32-.02-.45-.06-.13-.58-1.4-.8-1.92-.21-.51-.42-.44-.58-.45h-.5c-.17 0-.45.06-.68.32-.23.26-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.78 2.72 4.31 3.73.6.24 1.07.38 1.44.49.6.18 1.15.15 1.58.09.48-.06 1.53-.62 1.75-1.22.22-.6.22-1.11.15-1.22-.07-.1-.24-.15-.5-.27z"/></svg> WA
+        </a>
+        <img class="card-img" src="https://i.ibb.co/7d56JBqz/G1-J.jpg" alt="Horizon Tower Ajman">
+        <div class="card-content">
+          <h3>Horizon Tower</h3>
+          <div class="1 BedRoom 2 and 3 Available"></div>
+          <div class="address">Al Rashidiya 1, Ajman</div>
+          <button class="view-btn" onclick="openGallery([
+            'https://i.ibb.co/RT2X24qv/G1-A.jpg',
+			'https://i.ibb.co/tpWB17rD/G1-AA.jpg',
+			'https://i.ibb.co/yF9Ps42V/G1-AB.jpg',
+			'https://i.ibb.co/s96HWNqf/G1-AC.jpg',
+			'https://i.ibb.co/6cC4Qn8s/G1-B.jpg',
+			'https://i.ibb.co/fz1nxCpt/G1-C.jpg',
+			'https://i.ibb.co/DZ9Z017/G1-D.jpg',
+			'https://i.ibb.co/HLnjP6kQ/G1-E.jpg',
+			'https://i.ibb.co/KxVQJwQG/G1-F.jpg',
+			'https://i.ibb.co/zW5CRvRL/G1-H.jpg',
+			'https://i.ibb.co/7d56JBqz/G1-J.jpg',
+			'https://i.ibb.co/gLc1nW5k/G1-K.jpg',
+			'https://i.ibb.co/gbdpG57J/G1-L.jpg',
+			'https://i.ibb.co/sXyw5TJ/G1-R.jpg',
+			'https://i.ibb.co/pjgcTyK2/G1-T.jpg',
+			'https://i.ibb.co/zhnSvkx7/G1-U.jpg',
+			'https://i.ibb.co/5xJKBTXY/G1-W.jpg',
+			'https://i.ibb.co/TMq4GtQs/G1-X.jpg',
+			'https://i.ibb.co/k6G6sxjz/G1-Y.jpg',
+			'https://i.ibb.co/p6nVWNX2/G1-Z.jpg'
+          ])">▷ view gallery</button>
+        </div>
+      </div>
+
+      <!-- Property 2 - Crystal Tower (G2: 9 images) -->
+      <div class="property-card">
+        <a class="whatsapp-overlay" href="https://wa.me/971543612414?text=Hello%2C%20interested%20in%20this%20property" target="_blank">
+          <svg viewBox="0 0 24 24"><path d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.33 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01z"/><path d="M16.8 13.8c-.26-.13-1.53-.75-1.77-.84-.24-.09-.41-.13-.58.13-.17.26-.67.84-.82 1.01-.15.17-.3.19-.56.06-.26-.13-1.11-.41-2.11-1.3-.78-.7-1.31-1.56-1.46-1.82-.15-.26-.02-.4.11-.53.11-.11.26-.3.39-.45.13-.15.17-.26.26-.43.09-.17.04-.32-.02-.45-.06-.13-.58-1.4-.8-1.92-.21-.51-.42-.44-.58-.45h-.5c-.17 0-.45.06-.68.32-.23.26-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.78 2.72 4.31 3.73.6.24 1.07.38 1.44.49.6.18 1.15.15 1.58.09.48-.06 1.53-.62 1.75-1.22.22-.6.22-1.11.15-1.22-.07-.1-.24-.15-.5-.27z"/></svg> WA
+        </a>
+        <img class="card-img" src="https://i.ibb.co/4ZLz1pJn/G2-L.jpg" alt="Horizon Tower Offices Ajman">
+        <div class="card-content">
+          <h3> Horizon Tower Offices Ajman</h3>
+          <div class="Office Lot"> Al Rashidiya 1, Ajman</div>
+          <div class="address">Office Lot</div>
+          <button class="view-btn" onclick="openGallery([
+			'https://i.ibb.co/BH7fShkJ/G2-AA.jpg',
+			'https://i.ibb.co/hxHWSMKk/G2-AB.jpg',
+			'https://i.ibb.co/KM4rJKR/G2-AC.jpg',
+			'https://i.ibb.co/bggfdvt8/G2-B.jpg',
+			'https://i.ibb.co/h1XV2Tr5/G2-C.jpg',
+			'https://i.ibb.co/QvjnZfSS/G2-D.jpg',
+			'https://i.ibb.co/prM7mpFF/G2-E.jpg',
+			'https://i.ibb.co/rK86vrXN/G2-F.jpg',
+			'https://i.ibb.co/W4k21ZW2/G2-G.jpg',
+			'https://i.ibb.co/FbWBSZ77/G2-H.jpg',
+			'https://i.ibb.co/xSpHmT8v/G2-I.jpg',
+			'https://i.ibb.co/67RXx97s/G2-J.jpg',
+			'https://i.ibb.co/YF73Yj6v/G2-K.jpg',
+			'https://i.ibb.co/4ZLz1pJn/G2-L.jpg',
+			'https://i.ibb.co/1tzzJhDL/G2-M.jpg',
+			'https://i.ibb.co/vCDJ9HY0/G2-N.jpg',
+			'https://i.ibb.co/hJM2s1k8/G2-O.jpg',
+			'https://i.ibb.co/KH3FHFp/G2-P.jpg',
+			'https://i.ibb.co/HDdpFjZj/G2-Q.jpg',
+			'https://i.ibb.co/W40C0T6j/G2-R.jpg',
+			'https://i.ibb.co/twBX44Z1/G2-S.jpg',
+			'https://i.ibb.co/Gfj5Vgzc/G2-T.jpg',
+			'https://i.ibb.co/tPxVc6k6/G2-U.jpg',
+			'https://i.ibb.co/s8v3pyZ/G2-V.jpg',
+			'https://i.ibb.co/SwSWD50L/G2-W.jpg',
+			'https://i.ibb.co/JFwkX4RY/G2-X.jpg',
+			'https://i.ibb.co/9HpGmZGy/G2-Y.jpg',
+			'https://i.ibb.co/MkQv0zPP/G2-Z.jpg'		
+          ])">▷ view gallery</button>
+        </div>
+      </div>
+
+      <!-- Property 3 - Onyx Mansion (G3: 9 images) -->
+      <div class="property-card">
+        <a class="whatsapp-overlay" href="https://wa.me/971543612414?text=Hello%2C%20interested%20in%20this%20property" target="_blank">
+          <svg viewBox="0 0 24 24"><path d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.33 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01z"/><path d="M16.8 13.8c-.26-.13-1.53-.75-1.77-.84-.24-.09-.41-.13-.58.13-.17.26-.67.84-.82 1.01-.15.17-.3.19-.56.06-.26-.13-1.11-.41-2.11-1.3-.78-.7-1.31-1.56-1.46-1.82-.15-.26-.02-.4.11-.53.11-.11.26-.3.39-.45.13-.15.17-.26.26-.43.09-.17.04-.32-.02-.45-.06-.13-.58-1.4-.8-1.92-.21-.51-.42-.44-.58-.45h-.5c-.17 0-.45.06-.68.32-.23.26-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.78 2.72 4.31 3.73.6.24 1.07.38 1.44.49.6.18 1.15.15 1.58.09.48-.06 1.53-.62 1.75-1.22.22-.6.22-1.11.15-1.22-.07-.1-.24-.15-.5-.27z"/></svg> WA
+        </a>
+        <img class="card-img" src="https://i.ibb.co/LdKfxKxQ/GC-H.jpg" alt="Al Rashidiya">
+        <div class="card-content">
+          <h3>Al Rashidiya</h3>
+          <div class="Ajman">Al Rashidiya</div>
+          <div class="address">Al Rashidiya 1 Al Rashidiya 1 - Ajman - United Arab Emirates</div>
+         <button class="view-btn" onclick="openGallery([
+		
+		'https://i.ibb.co/vxZQR7jD/GC-A.jpg',
+		'https://i.ibb.co/bjrGkk7m/GC-B.jpg',
+		'https://i.ibb.co/ds9VvnK0/GC-C.jpg',
+		'https://i.ibb.co/m5C5qQ0d/GC-D.jpg',
+		'https://i.ibb.co/cKssSvNg/GC-E.jpg',
+		'https://i.ibb.co/xKC6770X/GC-F.jpg',
+		'https://i.ibb.co/LDJZpFvc/GC-G.jpg',
+		'https://i.ibb.co/LdKfxKxQ/GC-H.jpg',
+		'https://i.ibb.co/DHPnXH3h/GC-I.jpg',
+		'https://i.ibb.co/ccK1yDT4/GC-J.jpg',
+		'https://i.ibb.co/WN42db2z/GC-K.jpg',
+		'https://i.ibb.co/bjbMgrpx/GC-L.jpg',
+		'https://i.ibb.co/Kx4TdJm6/GC-M.jpg',
+		'https://i.ibb.co/TBnZ4sb2/GC-N.jpg',
+		'https://i.ibb.co/tpmkL3MT/GC-O.jpg',
+		'https://i.ibb.co/HfshW6B3/GC-P.jpg',
+		'https://i.ibb.co/vxMxTgD0/GC-Q.jpg',
+		'https://i.ibb.co/20Zfp8Mt/GC-R.jpg',
+		'https://i.ibb.co/r2T0Zj4L/GC-S.jpg',
+		'https://i.ibb.co/v4bjv4Dn/GC-T.jpg'
+          ])">▷ view gallery</button>
+        </div>
+      </div>
+
+      <!-- Property 4 - Diamond Heights (G4: 7 images) -->
+      <div class="property-card">
+        <a class="whatsapp-overlay" href="https://wa.me/971543612414?text=Hello%2C%20interested%20in%20this%20property" target="_blank">
+          <svg viewBox="0 0 24 24"><path d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.33 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01z"/><path d="M16.8 13.8c-.26-.13-1.53-.75-1.77-.84-.24-.09-.41-.13-.58.13-.17.26-.67.84-.82 1.01-.15.17-.3.19-.56.06-.26-.13-1.11-.41-2.11-1.3-.78-.7-1.31-1.56-1.46-1.82-.15-.26-.02-.4.11-.53.11-.11.26-.3.39-.45.13-.15.17-.26.26-.43.09-.17.04-.32-.02-.45-.06-.13-.58-1.4-.8-1.92-.21-.51-.42-.44-.58-.45h-.5c-.17 0-.45.06-.68.32-.23.26-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.78 2.72 4.31 3.73.6.24 1.07.38 1.44.49.6.18 1.15.15 1.58.09.48-.06 1.53-.62 1.75-1.22.22-.6.22-1.11.15-1.22-.07-.1-.24-.15-.5-.27z"/></svg> WA
+        </a>
+        <img class="card-img" src="https://i.ibb.co/Z66xggh3/GD-K.jpg" alt="Gulfa Towers">
+        <div class="card-content">
+          <h3>Gulfa Towers</h3>
+          <div class="Condominium complex in Ajman">Ajman</div>
+          <div class="address">Sheikh Khalifa Bin Zayed St - Ajman</div>
+          <button class="view-btn" onclick="openGallery([
+            'https://i.ibb.co/N6qVdyQT/GD-A.jpg',
+			'https://i.ibb.co/mrfSzcKM/GD-B.jpg',
+			'https://i.ibb.co/yn8qd5NY/GD-C.jpg',
+			'https://i.ibb.co/Q3bJYBKF/GD-D.jpg',
+			'https://i.ibb.co/RG9pBfVT/GD-E.jpg',
+			'https://i.ibb.co/x8sTB1pq/GD-F.jpg',
+			'https://i.ibb.co/Z6Ny2tnn/GD-G.jpg',
+			'https://i.ibb.co/8nJ20R6J/GD-H.jpg',
+			'https://i.ibb.co/4whjVs9L/GD-I.jpg',
+			'https://i.ibb.co/XxSsm5Y4/GD-J.jpg',
+			'https://i.ibb.co/Z66xggh3/GD-K.jpg',
+			'https://i.ibb.co/dJ27R4k2/GD-L.jpg'
+          ])">▷ view gallery</button>
+        </div>
+      </div>
+
+      <!-- Property 5 - Graphite Villa (G5: 12 images) -->
+      <div class="property-card">
+        <a class="whatsapp-overlay" href="https://wa.me/971543612414?text=Hello%2C%20interested%20in%20this%20property" target="_blank">
+          <svg viewBox="0 0 24 24"><path d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.33 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01z"/><path d="M16.8 13.8c-.26-.13-1.53-.75-1.77-.84-.24-.09-.41-.13-.58.13-.17.26-.67.84-.82 1.01-.15.17-.3.19-.56.06-.26-.13-1.11-.41-2.11-1.3-.78-.7-1.31-1.56-1.46-1.82-.15-.26-.02-.4.11-.53.11-.11.26-.3.39-.45.13-.15.17-.26.26-.43.09-.17.04-.32-.02-.45-.06-.13-.58-1.4-.8-1.92-.21-.51-.42-.44-.58-.45h-.5c-.17 0-.45.06-.68.32-.23.26-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.78 2.72 4.31 3.73.6.24 1.07.38 1.44.49.6.18 1.15.15 1.58.09.48-.06 1.53-.62 1.75-1.22.22-.6.22-1.11.15-1.22-.07-.1-.24-.15-.5-.27z"/></svg> WA
+        </a>
+        <img class="card-img" src="https://i.ibb.co/FbqJmRdr/GD-M.jpg" alt="Falcon Towers">
+        <div class="card-content">
+          <h3>Falcon Towers</h3>
+          <div class="Ajman">Falcon Towers</div>
+          <div class="address">Al Rashidiya 2 - Ajman</div>
+          <button class="view-btn" onclick="openGallery([
+            'https://i.ibb.co/PsgK4nkH/GD-AA.jpg',
+			'https://i.ibb.co/WvpFmTwg/GD-AB.jpg',
+			'https://i.ibb.co/5yjjbtR/GD-AC.jpg',
+			'https://i.ibb.co/qYdb1fRF/GD-E.jpg',
+			'https://i.ibb.co/QFqFFKGm/GD-F.jpg',
+			'https://i.ibb.co/VWD3j8jS/GD-G.jpg',
+			'https://i.ibb.co/bMLTTP68/GD-H.jpg',
+			'https://i.ibb.co/Kz3X3S4W/GD-I.jpg',
+			'https://i.ibb.co/Rp9P3kQd/GD-J.jpg',
+			'https://i.ibb.co/chZBQhzJ/GD-K.jpg',
+			'https://i.ibb.co/Zpr4NvDR/GD-L.jpg',
+			'https://i.ibb.co/FbqJmRdr/GD-M.jpg',
+			'https://i.ibb.co/jP0kYwnT/GD-N.jpg',
+			'https://i.ibb.co/Zpr4NvDR/GD-L.jpg',
+			'https://i.ibb.co/qFNYyFgr/GD-P.jpg',
+			'https://i.ibb.co/YBDS8n2v/GD-Q.jpg',
+			'https://i.ibb.co/mrzQKK0w/GD-R.jpg',
+			'https://i.ibb.co/xq2WmV3h/GD-S.jpg',
+			'https://i.ibb.co/zhg7PzDN/GD-T.jpg',
+			'https://i.ibb.co/CpRQdfRv/GD-U.jpg',
+			'https://i.ibb.co/Ps2QhSbw/GD-V.jpg',
+			'https://i.ibb.co/spH1vMS4/GD-W.jpg',
+			'https://i.ibb.co/nsdrYjBG/GD-X.jpg',
+			'https://i.ibb.co/6cpcwFsW/GD-Y.jpg',
+			'https://i.ibb.co/XxJv2KnB/GD-Z.jpg'
+          ])">▷ view gallery</button>
+        </div>
+      </div>
+
+      <!-- Property 6 - Shard Residences (G6: 20 images) -->
+      <div class="property-card">
+        <a class="whatsapp-overlay" href="https://wa.me/971543612414?text=Hello%2C%20interested%20in%20this%20property" target="_blank">
+		<a class="whatsapp-overlay" href="https://wa.me/18887407246?text=Hello%20interested%20in%20Shard%20Residences" target="_blank">
+       <svg viewBox="0 0 24 24"><path d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.33 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01z"/><path d="M16.8 13.8c-.26-.13-1.53-.75-1.77-.84-.24-.09-.41-.13-.58.13-.17.26-.67.84-.82 1.01-.15.17-.3.19-.56.06-.26-.13-1.11-.41-2.11-1.3-.78-.7-1.31-1.56-1.46-1.82-.15-.26-.02-.4.11-.53.11-.11.26-.3.39-.45.13-.15.17-.26.26-.43.09-.17.04-.32-.02-.45-.06-.13-.58-1.4-.8-1.92-.21-.51-.42-.44-.58-.45h-.5c-.17 0-.45.06-.68.32-.23.26-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.78 2.72 4.31 3.73.6.24 1.07.38 1.44.49.6.18 1.15.15 1.58.09.48-.06 1.53-.62 1.75-1.22.22-.6.22-1.11.15-1.22-.07-.1-.24-.15-.5-.27z"/></svg> WA
+        </a>
+        <img class="card-img" src="https://i.ibb.co/3ykzpfFj/G-J.jpg" alt="Al-Khor Towers">
+        <div class="card-content">
+          <h3>Al-Khor Towers</h3>
+          <div class="Ajman">Al-Khor Towers</div>
+          <div class="address">Al Rashidiya 2 - Ajman</div>
+          <button class="view-btn" onclick="openGallery([
+			'https://i.ibb.co/DJKfPgh/G-AA.jpg',
+			'https://i.ibb.co/bRyvj0zs/G-G.jpg',
+			'https://i.ibb.co/p64v8wVt/G-H.jpg',
+			'https://i.ibb.co/qFYsnk7L/G-I.jpg',
+			'https://i.ibb.co/3ykzpfFj/G-J.jpg',
+			'https://i.ibb.co/RpYbJj2V/G-K.jpg',
+			'https://i.ibb.co/0V1DSc89/G-L.jpg',
+			'https://i.ibb.co/v6wLx3Q9/G-M.jpg',
+			'https://i.ibb.co/63Z3Td3/G-N.jpg',
+			'https://i.ibb.co/mC9KMhym/G-O.jpg',
+			'https://i.ibb.co/dsSd0ntX/G-P.jpg',
+			'https://i.ibb.co/d0hbKBWQ/G-Q.jpg',
+			'https://i.ibb.co/hRd44yDd/G-R.jpg',
+			'https://i.ibb.co/SDCLWRkC/G-S.jpg',
+			'https://i.ibb.co/ycNG3zMm/G-T.jpg',
+			'https://i.ibb.co/bg1BVNCJ/G-U.jpg',
+			'https://i.ibb.co/Fb3vwWz2/G-V.jpg',
+			'https://i.ibb.co/MkBb8Cs1/G-W.jpg',
+			'https://i.ibb.co/Z6C7t48S/G-X.jpg',
+			'https://i.ibb.co/21SdH3fK/G-Y.jpg',
+			'https://i.ibb.co/M5DN8qvY/G-Z.jpg'
+          ])">▷ view gallery</button>
+        </div>
+      </div>
+
+      <!-- NEW Property 7 - Aether Loft (G7: 20 images) -->
+      <div class="property-card">
+        <a class="whatsapp-overlay" href="https://wa.me/971543612414?text=Hello%2C%20interested%20in%20this%20property" target="_blank">
+          <svg viewBox="0 0 24 24"><path d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.33 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01z"/><path d="M16.8 13.8c-.26-.13-1.53-.75-1.77-.84-.24-.09-.41-.13-.58.13-.17.26-.67.84-.82 1.01-.15.17-.3.19-.56.06-.26-.13-1.11-.41-2.11-1.3-.78-.7-1.31-1.56-1.46-1.82-.15-.26-.02-.4.11-.53.11-.11.26-.3.39-.45.13-.15.17-.26.26-.43.09-.17.04-.32-.02-.45-.06-.13-.58-1.4-.8-1.92-.21-.51-.42-.44-.58-.45h-.5c-.17 0-.45.06-.68.32-.23.26-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.78 2.72 4.31 3.73.6.24 1.07.38 1.44.49.6.18 1.15.15 1.58.09.48-.06 1.53-.62 1.75-1.22.22-.6.22-1.11.15-1.22-.07-.1-.24-.15-.5-.27z"/></svg> WA
+        </a>
+        <img class="card-img" src="https://i.ibb.co/LBcq9CQ/G8H-FRX.jpg" alt="Villa For Sale">
+        <div class="card-content">
+          <h3>Big Villa Ajman</h3>
+          <div class="AJman">Villa For Sale</div>
+          <div class="address">Beautiful Villa Available</div>
+          <button class="view-btn" onclick="openGallery([
+            
+			'https://i.ibb.co/R4DC8rYd/G8H-FRH.jpg',
+			'https://i.ibb.co/tTwdwXpR/G8H-FRI.jpg',
+			'https://i.ibb.co/jvVJDbv8/G8H-FRJ.jpg',
+			'https://i.ibb.co/C3jQbzgN/G8H-FRK.jpg',
+			'https://i.ibb.co/TDGtZS0q/G8H-FRL.jpg',
+			'https://i.ibb.co/F4PVjXLH/G8H-FRM.jpg',
+			'https://i.ibb.co/60vyW1yd/G8H-FRN.jpg',
+			'https://i.ibb.co/zhWgDbb9/G8H-FRO.jpg',
+			'https://i.ibb.co/rRt4SMHf/G8H-FRP.jpg',
+			'https://i.ibb.co/270MpwZd/G8H-FRQ.jpg',
+			'https://i.ibb.co/NnGr5WDC/G8H-FRR.jpg',
+			'https://i.ibb.co/vvHK78Qc/G8H-FRS.jpg',
+			'https://i.ibb.co/qVp2gwt/G8H-FRT.jpg',
+			'https://i.ibb.co/VWTtj2h9/G8H-FRU.jpg',
+			'https://i.ibb.co/xqDPJ55n/G8H-FRV.jpg',
+			'https://i.ibb.co/TBT18Js9/G8H-FRW.jpg',
+			'https://i.ibb.co/LBcq9CQ/G8H-FRX.jpg',
+			'https://i.ibb.co/gMykmv6G/G8H-FRY.jpg'
+			
+          ])">▷ view gallery</button>
+        </div>
+      </div>
+
+      <!-- NEW Property 8 - Velvet Mansion (G8: 38 images) -->
+      <div class="property-card">
+        <a class="whatsapp-overlay" href="https://wa.me/971543612414?text=Hello%2C%20interested%20in%20this%20property" target="_blank">
+          <svg viewBox="0 0 24 24"><path d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.33 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01z"/><path d="M16.8 13.8c-.26-.13-1.53-.75-1.77-.84-.24-.09-.41-.13-.58.13-.17.26-.67.84-.82 1.01-.15.17-.3.19-.56.06-.26-.13-1.11-.41-2.11-1.3-.78-.7-1.31-1.56-1.46-1.82-.15-.26-.02-.4.11-.53.11-.11.26-.3.39-.45.13-.15.17-.26.26-.43.09-.17.04-.32-.02-.45-.06-.13-.58-1.4-.8-1.92-.21-.51-.42-.44-.58-.45h-.5c-.17 0-.45.06-.68.32-.23.26-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.78 2.72 4.31 3.73.6.24 1.07.38 1.44.49.6.18 1.15.15 1.58.09.48-.06 1.53-.62 1.75-1.22.22-.6.22-1.11.15-1.22-.07-.1-.24-.15-.5-.27z"/></svg> WA
+        </a>
+        <img class="card-img" src="https://i.ibb.co/HLT4S7s5/G7-FQ.jpg" alt="Al Nuaimiya Towers">
+        <div class="card-content">
+          <h3>Al Nuaimiya Towers</h3>
+          <div class="Ajman">Al Nuaimiya Towers</div>
+          <div class="address">Al Nuaimiya Tower Ajman</div>
+          <button class="view-btn" onclick="openGallery([
+				'https://i.ibb.co/HLT4S7s5/G7-FQ.jpg',
+            'https://i.ibb.co/7tgHtysD/G7-FR.jpg',
+            'https://i.ibb.co/PG1MtQhf/G7-FS.jpg',
+            'https://i.ibb.co/bpjxFv1/G7-FT.jpg',
+            'https://i.ibb.co/cKD03VDk/G7-FU.jpg',
+            'https://i.ibb.co/M5KGD6Hm/G7-FV.jpg',
+            'https://i.ibb.co/sp2w5Y76/G7-FW.jpg',
+            'https://i.ibb.co/DTLx7dt/G7-FX.jpg',
+            'https://i.ibb.co/dJP8xv9y/G7-FY.jpg',
+            'https://i.ibb.co/v6c2j5MV/G7-FZ.jpg',
+            'https://i.ibb.co/LD3NpXT4/G7-GC.jpg',
+            'https://i.ibb.co/s9pCmDS5/G7-GD.jpg',
+            'https://i.ibb.co/RppnSqNL/G7-GG.jpg',
+            'https://i.ibb.co/rRPhrVy7/G7-GH.jpg',
+            'https://i.ibb.co/jv3G20xh/G7-GI.jpg',
+            'https://i.ibb.co/rf7c4Xmt/G7-GJ.jpg'
+          ])">▷ view gallery</button>
+        </div>
+      </div>
+
+      <!-- NEW Property 9 - Sapphire Estate (G9: 46 images) -->
+      <div class="property-card">
+        <a class="whatsapp-overlay" href="https://wa.me/971543612414?text=Hello%2C%20interested%20in%20this%20property" target="_blank">
+          <svg viewBox="0 0 24 24"><path d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.33 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01z"/><path d="M16.8 13.8c-.26-.13-1.53-.75-1.77-.84-.24-.09-.41-.13-.58.13-.17.26-.67.84-.82 1.01-.15.17-.3.19-.56.06-.26-.13-1.11-.41-2.11-1.3-.78-.7-1.31-1.56-1.46-1.82-.15-.26-.02-.4.11-.53.11-.11.26-.3.39-.45.13-.15.17-.26.26-.43.09-.17.04-.32-.02-.45-.06-.13-.58-1.4-.8-1.92-.21-.51-.42-.44-.58-.45h-.5c-.17 0-.45.06-.68.32-.23.26-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.78 2.72 4.31 3.73.6.24 1.07.38 1.44.49.6.18 1.15.15 1.58.09.48-.06 1.53-.62 1.75-1.22.22-.6.22-1.11.15-1.22-.07-.1-.24-.15-.5-.27z"/></svg> WA
+        </a>
+        <img class="card-img" src="https://i.ibb.co/3m56kVFN/G9-FT.jpg" alt="Zohra Marina">
+        <div class="card-content">
+          <h3>Zohra Marina</h3>
+          <div class="Ajman">Zohra Marina</div>
+          <div class="address">Zohra Marina Ajman</div>
+          <button class="view-btn" onclick="openGallery([
+            'https://i.ibb.co/d0Tzy1xh/G9-FS.jpg',
+			'https://i.ibb.co/3m56kVFN/G9-FT.jpg',
+			'https://i.ibb.co/SXR3NdJf/G9-FU.jpg',
+			'https://i.ibb.co/wZyMsHk9/G9-FV.jpg',
+			'https://i.ibb.co/j92Zn5Dn/G9-FW.jpg',
+			'https://i.ibb.co/fdQbL6MR/G9-FX.jpg',
+			'https://i.ibb.co/DfCM3vGK/G9-FY.jpg',
+			'https://i.ibb.co/gZhWMBtd/G9-FZ.jpg',
+			'https://i.ibb.co/q37yv3wD/G9-GA.jpg',
+			'https://i.ibb.co/20KCxw1k/G9-GB.jpg',
+			'https://i.ibb.co/NvwBpfW/G9-GC.jpg',
+			'https://i.ibb.co/8L2WFCm3/G9-GD.jpg',
+			'https://i.ibb.co/Nd882CH5/G9-GE.jpg',
+			'https://i.ibb.co/B597JKK8/G9-GF.jpg',
+			'https://i.ibb.co/pjkYyFxB/G9-GG.jpg'
+          ])">▷ view gallery</button>
+        </div>
+      </div>
+
+      <!-- NEW Property 10 - Onyx Sky Villa (G10: 11 images) -->
+      <div class="property-card">
+        <a class="whatsapp-overlay" href="https://wa.me/971543612414?text=Hello%2C%20interested%20in%20this%20property" target="_blank">
+          <svg viewBox="0 0 24 24"><path d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.33 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01z"/><path d="M16.8 13.8c-.26-.13-1.53-.75-1.77-.84-.24-.09-.41-.13-.58.13-.17.26-.67.84-.82 1.01-.15.17-.3.19-.56.06-.26-.13-1.11-.41-2.11-1.3-.78-.7-1.31-1.56-1.46-1.82-.15-.26-.02-.4.11-.53.11-.11.26-.3.39-.45.13-.15.17-.26.26-.43.09-.17.04-.32-.02-.45-.06-.13-.58-1.4-.8-1.92-.21-.51-.42-.44-.58-.45h-.5c-.17 0-.45.06-.68.32-.23.26-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.78 2.72 4.31 3.73.6.24 1.07.38 1.44.49.6.18 1.15.15 1.58.09.48-.06 1.53-.62 1.75-1.22.22-.6.22-1.11.15-1.22-.07-.1-.24-.15-.5-.27z"/></svg> WA
+        </a>
+        <img class="card-img" src="https://i.ibb.co/tP8856nn/G10-FKJ.jpg" alt="City Tower Ajman">
+        <div class="card-content">
+          <h3>City Tower</h3>
+          <div class="Ajman">City Tower</div>
+          <div class="address">3 Al Nuaimia - Ajman</div>
+          <button class="view-btn" onclick="openGallery([
+            'https://i.ibb.co/0pXV7hpk/G10-FJJ.jpg',
+			'https://i.ibb.co/cpwMYx3/G10-FJK.jpg',
+			'https://i.ibb.co/7d8Tf4JB/G10-FJL.jpg',
+			'https://i.ibb.co/5HPKs8J/G10-FJM.jpg',
+			'https://i.ibb.co/j9Q9Rnbd/G10-FJN.jpg',
+			'https://i.ibb.co/ZRc1MpbZ/G10-FJO.jpg',
+			'https://i.ibb.co/tMX07FyS/G10-FJP.jpg',
+			'https://i.ibb.co/j9Svd1jT/G10-FJQ.jpg',
+			'https://i.ibb.co/kgwLdp1D/G10-FJR.jpg',
+			'https://i.ibb.co/6RjPLBxH/G10-FJS.jpg',
+			'https://i.ibb.co/27cB6yxh/G10-FJT.jpg',
+			'https://i.ibb.co/KxMyJQRn/G10-FJU.jpg',
+			'https://i.ibb.co/LXBXMgw6/G10-FJV.jpg',
+			'https://i.ibb.co/5h5JGFf3/G10-FJW.jpg',
+			'https://i.ibb.co/5hf1k2HT/G10-FJX.jpg',
+			'https://i.ibb.co/yFfCkv3N/G10-FJY.jpg',
+			'https://i.ibb.co/JWs0yJnY/G10-FJZ.jpg',
+			'https://i.ibb.co/7JFN9K3z/G10-FKA.jpg',
+			'https://i.ibb.co/ZpTzF39p/G10-FKB.jpg',
+			'https://i.ibb.co/kgvRrYNj/G10-FKC.jpg',
+			'https://i.ibb.co/qM058Zyw/G10-FKD.jpg',
+			'https://i.ibb.co/xtF23fSY/G10-FKE.jpg',
+			'https://i.ibb.co/bg1c95N0/G10-FKF.jpg',
+			'https://i.ibb.co/wFRhFYL7/G10-FKG.jpg',
+			'https://i.ibb.co/B5Gmsb25/G10-FKH.jpg',
+			'https://i.ibb.co/vxBTp1Cv/G10-FKI.jpg',
+			'https://i.ibb.co/tP8856nn/G10-FKJ.jpg',
+			'https://i.ibb.co/8DSZVN1k/G10-FKK.jpg'
+          ])">▷ view gallery</button>
+	
+          <button class="view-btn" onclick="alert('Gallery coming soon')">▷ view gallery</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="extra-images-panel" id="extraPanel">
+      <div class="extra-card"><img src="https://picsum.photos/id/45/300/300"><p>Infinity Pool</p></div>
+      <div class="extra-card"><img src="https://picsum.photos/id/46/300/300"><p>Night View</p></div>
+      <div class="extra-card"><img src="https://picsum.photos/id/47/300/300"><p>Lobby</p></div>
+    </div>
+    <div class="click-message" id="clickMessage">✨ Additional visuals loaded — 3 per row ✨</div>
+
+    <!-- ABOUT US SECTION -->
+    <div id="about" class="about-section">
+      <div class="about-content">
+        <div class="about-text">
+          <h3>About Al Farooq Real Estate</h3>
+          <p>Founded in 2010, Al Farooq Real Estate Invest L.L.C has established itself as a premier real estate firm in Ajman and the Northern Emirates. We specialize in luxury residential properties, commercial spaces, and high-yield investment opportunities.</p>
+          <p>Our commitment to transparency, integrity, and client satisfaction has earned us the trust of over 980+ investors and families. We don't just sell properties — we build lasting relationships and help you create your legacy in the UAE.</p>
+          <div class="about-features">
+            <div class="feature-item"><span class="feature-icon">⭐</span><div><h4>Market Leaders</h4><p>Top-rated agency in Ajman</p></div></div>
+            <div class="feature-item"><span class="feature-icon">🏆</span><div><h4>Award Winning</h4><p>Excellence in real estate 2024</p></div></div>
+            <div class="feature-item"><span class="feature-icon">🤝</span><div><h4>Trusted Partners</h4><p>Official partners with top developers</p></div></div>
+            <div class="feature-item"><span class="feature-icon">🌍</span><div><h4>Global Reach</h4><p>International client base</p></div></div>
+          </div>
+        </div>
+        <div class="about-stats-grid">
+          <div class="about-stat-card"><div class="about-stat-number">15+</div><div class="about-stat-label">Years Experience</div></div>
+          <div class="about-stat-card"><div class="about-stat-number">980+</div><div class="about-stat-label">Happy Clients</div></div>
+          <div class="about-stat-card"><div class="about-stat-number">220+</div><div class="about-stat-label">Properties Sold</div></div>
+          <div class="about-stat-card"><div class="about-stat-number">25+</div><div class="about-stat-label">Expert Agents</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- OUR TEAM SECTION -->
+    <div id="team" class="team-section">
+      <div class="section-title">
+        <h2>OUR EXPERT TEAM</h2>
+      </div>
+      <div class="team-grid">
+        <div class="team-card"><img src="https://randomuser.me/api/portraits/men/32.jpg" class="team-img"><h3>Ahmed Al Farooqi</h3><div class="team-title">Founder & CEO</div><div class="team-desc">15+ years in UAE real estate</div></div>
+        <div class="team-card"><img src="https://randomuser.me/api/portraits/women/68.jpg" class="team-img"><h3>Fatima Hassan</h3><div class="team-title">Head of Sales</div><div class="team-desc">Luxury property specialist</div></div>
+        <div class="team-card"><img src="https://randomuser.me/api/portraits/men/45.jpg" class="team-img"><h3>Omar Rashid</h3><div class="team-title">Investment Advisor</div><div class="team-desc">Portfolio management expert</div></div>
+        <div class="team-card"><img src="https://randomuser.me/api/portraits/women/89.jpg" class="team-img"><h3>Layla Mahmoud</h3><div class="team-title">Client Relations</div><div class="team-desc">Dedicated to satisfaction</div></div>
+      </div>
+    </div>
+
+    <!-- QR CODE SECTION -->
+    <div class="barcodes-section">
+      <div class="barcodes-header">
+        <h2>📱 Scan & Connect</h2>
+        <p style="color:#bcab8b; margin-top:0.5rem;">Scan any QR code to instantly chat, find us, or save contact details</p>
+      </div>
+      <div class="barcode-grid">
+        <div class="barcode-card"><div class="barcode-icon">💬</div><h3>WhatsApp</h3><p style="color:#bcab8b;">Scan to chat & inquire</p><div id="whatsappQr" class="qr-container"></div><div class="scan-hint">📲 Opens WhatsApp instantly</div></div>
+        <div class="barcode-card"><div class="barcode-icon">📍</div><h3>Our Location</h3><p style="color:#bcab8b;">Horizon Tower, Ajman</p><div id="locationQr" class="qr-container"></div><div class="scan-hint">🗺️ Opens Google Maps</div></div>
+        <div class="barcode-card"><div class="barcode-icon">📇</div><h3>Contact Details</h3><p style="color:#bcab8b;">Save to your device</p><div id="contactQr" class="qr-container"></div><div class="scan-hint">📞 vCard: +971 50 153 8777</div></div>
+      </div>
+    </div>
+
+    <!-- CONTACT & MAP SECTION -->
+    <div id="contact" class="contact-map-section">
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3606.285191327787!2d55.43276431501469!3d25.313436483841166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5f3b2e9b9b9b%3A0x2b5b5b5b5b5b5b!2sHorizon%20Towers!5e0!3m2!1sen!2sae!4v1699999999999!5m2!1sen!2sae" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+      <div class="contact-details">
+        <div class="contact-info">
+          <div class="office">AL FAROOQ REAL ESTATE INVEST L.L.C</div>
+          <div style="display:flex; align-items:center; gap:8px; margin:0.5rem 0; color:#e1ca9c;"><span>📍</span> Horizon Tower, Block D Office No. 602 - Ajman</div>
+          <a href="tel:+971501538777" class="phone-big"><span>📞</span> +971 50 153 8777</a>
+          <div style="margin-top:0.3rem; color:#8a784e;">🕒 Open · Closes 5 PM (Mon-Fri)</div>
+        </div>
+        <a class="direction-btn" href="https://www.google.com/maps/dir//Horizon+Tower,+Ajman" target="_blank"><span>📍</span> GET DIRECTIONS</a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-col"><h4>AL FAROOQ REAL ESTATE</h4><p>Luxury & investment solutions</p><p>📍 Horizon Tower, Ajman</p><p>📞 +971 50 153 8777</p><p>✉️ info@alfarooqestate.ae</p></div>
+      <div class="footer-col"><h4>EXPLORE</h4><a href="#listings">Off-plan Projects</a><a href="#listings">Ready Properties</a><a href="#listings">Commercial</a><a href="#listings">Leasing</a></div>
+      <div class="footer-col"><h4>CONNECT</h4><a href="#">Facebook</a><a href="#">Instagram</a><a href="#">LinkedIn</a><a href="#">Twitter</a></div>
+    </div>
+    <div class="copyright">© 2025 AL FAROOQ REAL ESTATE INVEST L.L.C · Horizon Tower, Ajman · +971 50 153 8777</div>
+  </footer>
+
+  <div class="gallery-modal" id="galleryModal">
+    <div class="gallery-content">
+      <span class="gallery-close" onclick="closeGallery()">&times;</span>
+      <div class="gallery-nav gallery-prev" onclick="changeImage(-1)">❮</div>
+      <img class="gallery-image" id="galleryImage" src="" alt="Gallery">
+      <div class="gallery-nav gallery-next" onclick="changeImage(1)">❯</div>
+      <div class="gallery-counter" id="galleryCounter"></div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+  <script>
+    // Gallery Functions
+    let currentImages = [];
+    let currentIndex = 0;
+
+    function openGallery(images) {
+      currentImages = images;
+      currentIndex = 0;
+      updateGalleryImage();
+      document.getElementById('galleryModal').classList.add('show');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeGallery() {
+      document.getElementById('galleryModal').classList.remove('show');
+      document.body.style.overflow = 'auto';
+    }
+
+    function changeImage(direction) {
+      currentIndex += direction;
+      if (currentIndex < 0) currentIndex = currentImages.length - 1;
+      if (currentIndex >= currentImages.length) currentIndex = 0;
+      updateGalleryImage();
+    }
+
+    function updateGalleryImage() {
+      const img = document.getElementById('galleryImage');
+      img.src = currentImages[currentIndex];
+      document.getElementById('galleryCounter').textContent = `${currentIndex + 1} / ${currentImages.length}`;
+    }
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeGallery();
+    });
+
+    // Active navigation highlight
+    const sections = document.querySelectorAll('section[id], div[id="about"], div[id="team"], div[id="listings"], div[id="contact"]');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        const sectionHeight = section.offsetHeight;
+        if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+          current = section.getAttribute('id');
+        }
+      });
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+        }
+      });
+    });
+
+    // Extra panel toggle
+    const showBtn = document.getElementById('showMoreBtn');
+    const extraPanel = document.getElementById('extraPanel');
+    const msgDiv = document.getElementById('clickMessage');
+    if (showBtn) {
+      showBtn.addEventListener('click', () => {
+        extraPanel.classList.toggle('show-extra');
+        msgDiv.classList.toggle('show-message');
+      });
+    }
+
+    // QR Code Generation
+    function generateQRCodes() {
+      if (document.getElementById('whatsappQr')) {
+        new QRCode(document.getElementById('whatsappQr'), { text: 'https://wa.me/971501538777?text=Hello%2C%20I%27m%20interested%20in%20your%20properties', width: 130, height: 130, colorDark: '#c8a453', colorLight: '#1f1b15' });
+        new QRCode(document.getElementById('locationQr'), { text: 'https://www.google.com/maps/search/?api=1&query=Horizon+Tower+Ajman', width: 130, height: 130, colorDark: '#c8a453', colorLight: '#1f1b15' });
+        var vCard = 'BEGIN:VCARD\nVERSION:3.0\nFN:Al Farooq Real Estate\nTEL:+971501538777\nEMAIL:info@alfarooqestate.ae\nEND:VCARD';
+        new QRCode(document.getElementById('contactQr'), { text: vCard, width: 130, height: 130, colorDark: '#c8a453', colorLight: '#1f1b15' });
+      }
+    }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', generateQRCodes);
+    else generateQRCodes();
+  </script>
+</body>
+</html>
